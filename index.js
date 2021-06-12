@@ -17,8 +17,15 @@ class CMSConverter{
         console.log('Fetching contest ...');
 
         const contests = (await axios.get('/contests/')).data;
+        let count = 0;
         let contestID = "";
-        for(const i in contests){ contestID = i; break; }
+        for(const i in contests){
+            if(count === config.cms.cid){
+                contestID = i;
+                break;
+            }
+            count++;
+        }
         const contest = contests[contestID];
 
         this.contestID = contestID;
@@ -82,6 +89,8 @@ class CMSConverter{
 
         for(let i=0; i<submissions.length; i++) {
             const id = i + 1;
+            if(!this.problemMap.hasOwnProperty(submissions[i][1])) continue;
+
             const team = this.teamMap[submissions[i][0]];
             const problem = this.problemMap[submissions[i][1]];
             const result = submissions[i][3] === 100 ? 'Yes' : 'No';

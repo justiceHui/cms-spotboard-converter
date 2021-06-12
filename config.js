@@ -6,7 +6,12 @@ module.exports = {
          * Contest Management System Scoreboard base URL
          * Do not add '/' at the end of line!
          */
-        scoreboard: 'https://ranking.ioi2020.sg'
+        scoreboard: 'https://ranking.ioi2020.sg',
+        /**
+         * if you run more than one contest, you should set contest-index
+         * default: 0
+         */
+        cid: 0,
     },
 
     /**
