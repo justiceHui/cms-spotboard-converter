@@ -5,6 +5,9 @@ It was tested with [IOI 2020 Official Scoreboard](https://ranking.ioi2020.sg/).
 
 This project was inspired by [spotboard/domjudge-converter](https://github.com/spotboard/domjudge-converter).
 
+# Demo
+* [IOI 2020 Day1 - freeze at 4h](https://justicehui.github.io/cms-spotboard-converter-demo/)
+
 # Warning
 * **Do not support subtask**
 * **cmsRankingWebServer must operate correctly**
